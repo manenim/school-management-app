@@ -2,6 +2,7 @@ import Sidebar from "@/components/sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,18 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <>
+      <section className={inter.className}>
         <main className="flex">
-          <div className="min-h-screen w-[18%] bg-gray-700">
+          <div className="min-h-screen w-[18%] fixed">
             <Sidebar />
           </div>
-          <div className="w-[82%] bg-red-300">
-            <header className="h-[9vh] bg-green-500">header</header>
-            <div>{children}</div>
+          <div className="ml-[18%] w-[82%]">
+            <header className="h-[9vh] bg-white fixed w-[82%]">
+              <Header />
+            </header>
+            <div className="mt-[9vh]">{children}</div>
           </div>
         </main>
-      </body>
-    </html>
+      </section>
+    </>
   );
 }
