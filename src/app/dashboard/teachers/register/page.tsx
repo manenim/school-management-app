@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
+import { useRouter } from "next/navigation";
+
 import {
   Form,
   FormControl,
@@ -47,6 +49,8 @@ const formSchema = z
   })
 
 const TeachersForm = () => {
+      const router = useRouter();
+
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
@@ -61,7 +65,11 @@ const TeachersForm = () => {
 
     const handleSubmit = (values: z.infer<typeof formSchema>) => {
         
-      console.log({ values });
+        console.log({ values });
+        
+
+         router.push("/dashboard/teachers", { scroll: false });
+
     };
 
 
