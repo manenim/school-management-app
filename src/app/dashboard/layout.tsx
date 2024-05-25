@@ -1,3 +1,4 @@
+import Sidebar from "@/components/sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
@@ -18,9 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="flex">
-          <div className="min-h-screen w-[22%] bg-gray-700">sidebar</div>
-          <div className="w-[78%] bg-red-300">
-            <header className="h-[10vh] bg-green-500">header</header>
+          <div className="min-h-screen w-[18%] bg-gray-700">
+            <Sidebar />
+          </div>
+          <div className="w-[82%] bg-red-300">
+            <header className="h-[9vh] bg-green-500">header</header>
             <div>{children}</div>
           </div>
         </main>
