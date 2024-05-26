@@ -92,10 +92,10 @@ export const columns: ColumnDef<Teacher>[] = [
             </Link>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(teacher.id)}>
-              Copy payment ID
+              Copy Teacher ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
+            {/* <DropdownMenuItem>View customer</DropdownMenuItem> */}
           </DropdownMenuContent>
         </DropdownMenu>
       );

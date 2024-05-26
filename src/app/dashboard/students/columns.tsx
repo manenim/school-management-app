@@ -84,12 +84,12 @@ export const columns: ColumnDef<Teacher>[] = [
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(teacher.id)}>
-              Copy payment ID
+              Copy Student ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
+            {/* <DropdownMenuItem>View customer</DropdownMenuItem> */}
             <Link href={`/dashboard/students/${teacher.id}`}>
-              <DropdownMenuItem>View Teacher details</DropdownMenuItem>
+              <DropdownMenuItem>View Student details</DropdownMenuItem>
             </Link>
           </DropdownMenuContent>
         </DropdownMenu>
