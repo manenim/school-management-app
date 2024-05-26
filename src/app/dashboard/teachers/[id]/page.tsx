@@ -31,7 +31,7 @@ const Teacher = (props: Props) => {
           }>
           <div className="title">
               <h2 className="text-center mt-8 py-8 text-2xl font-bold">
-                {teacher.name}'s profile
+                {teacher.name} {teacher.surname} profile
             </h2>
           </div>
           <div className="wrapper bg-white border rounded-lg w-[60%] min-h-[60vh] mx-auto">

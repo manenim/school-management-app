@@ -22,10 +22,10 @@ const Hero = (props: Props) => {
           </svg>
         </a>
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-          Keep Your Network Organized and Secure{" "}
+          Keep Your School Data Organized
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-          Build Stronger Relationships with Smarter Contact Management
+          Build a Stronger Institution with Smarter School data Management
         </p>
         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <Link

@@ -37,7 +37,7 @@ const Teacher = (props: Props) => {
             </div>
           }>
           <div className="title">
-            <h2 className="text-center mt-8 py-8 text-2xl font-bold">{student.name}'s profile</h2>
+            <h2 className="text-center mt-8 py-8 text-2xl font-bold">{student.name} {student.surname} profile</h2>
           </div>
           <div className="wrapper bg-white border rounded-lg w-[60%] min-h-[60vh] mx-auto">
             <div className="px-8 mt-14">
