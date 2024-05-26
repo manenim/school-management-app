@@ -9,7 +9,7 @@ export const studentsApi = createApi({
 
   endpoints: (builder) => ({
     getAllStudents: builder.query({
-      query: () => ({
+      query: (token?: string) => ({
         url: "/students",
         method: "GET",
         headers: {
@@ -55,8 +55,8 @@ export const studentsApi = createApi({
     }),
 
     getStudentById: builder.query({
-      query: ({ token, studentId }) => ({
-        url: `/contacts/${studentId}`,
+      query: ( studentId ) => ({
+        url: `/students/${studentId}`,
         method: "GET",
         headers: {
           "Content-Type": "application/json",

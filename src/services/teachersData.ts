@@ -14,12 +14,10 @@ export const teachersApi = createApi({
 
   endpoints: (builder) => ({
     getAllTeachers: builder.query({
-      query: () => ({
+      query: (token) => ({
         url: "/teachers",
         method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        
       }),
       providesTags: ["Teachers"],
     }),
@@ -60,8 +58,8 @@ export const teachersApi = createApi({
     }),
 
     getTeacherById: builder.query({
-      query: ({ teacherId }) => ({
-        url: `/contacts/${teacherId}`,
+      query: ( teacherId ) => ({
+        url: `/teachers/${teacherId}`,
         method: "GET",
         headers: {
           "Content-Type": "application/json",

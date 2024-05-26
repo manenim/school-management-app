@@ -4,6 +4,7 @@ import { ColumnDef } from "@tanstack/react-table";
 
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -20,22 +21,16 @@ import Link from "next/link";
 export type Teacher = {
   id: string;
   nationalId: string;
-  title: "Mr" | "Mrs" | "Miss" | "Dr" | "Prof";
   name: string;
   surname: string;
   dateOfBirth: string;
-  teacherNumber: string;
-  salary: number;
+  studentNumber: string;
 };
 
 export const columns: ColumnDef<Teacher>[] = [
   {
-    accessorKey: "teacherNumber",
-    header: "Teacher No.",
-  },
-  {
-    accessorKey: "title",
-    header: "Title",
+    accessorKey: "studentNumber",
+    header: "Student No.",
   },
   {
     accessorKey: "name",
@@ -87,15 +82,15 @@ export const columns: ColumnDef<Teacher>[] = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <Link href={`/dashboard/teachers/${teacher.id}`}>
-              <DropdownMenuItem>View Teacher details</DropdownMenuItem>
-            </Link>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(teacher.id)}>
               Copy payment ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>View customer</DropdownMenuItem>
+            <Link href={`/dashboard/students/${teacher.id}`}>
+              <DropdownMenuItem>View Teacher details</DropdownMenuItem>
+            </Link>
           </DropdownMenuContent>
         </DropdownMenu>
       );
